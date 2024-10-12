@@ -276,6 +276,7 @@ Below is a screenshot demonstrating the working of the project:
 
 
 
-[Working Demo Video]([path/to/video.mp4](https://github.com/user-attachments/assets/cb40c7bf-3fcd-475d-a0d3-bd12c5c21d17))
+## Working Demo Video
 
+https://github.com/user-attachments/assets/cb40c7bf-3fcd-475d-a0d3-bd12c5c21d17
 
