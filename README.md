@@ -218,7 +218,7 @@ This setup provides a full-stack network monitoring solution using Prometheus fo
 Below is a screenshot demonstrating the working of the project:
 
 
-![Grafana](Network-Monitoring-Dashboard-Prometheus-Grafana-Alerting/screenshorts/grafana_terminal.png)
+![Grafana](/screenshorts/grafana_terminal.png)
      
 
               
