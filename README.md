@@ -199,7 +199,7 @@ Grafana: http://<server_IP>:3000
 AlertManager: http://<server_IP>:9093
 
 
-### Conclusion
+## Conclusion
 
 This setup provides a full-stack network monitoring solution using Prometheus for metrics collection, Grafana for visualization, and AlertManager for alerting.
       
@@ -213,7 +213,12 @@ This setup provides a full-stack network monitoring solution using Prometheus fo
 
 
 
+### Screenshots
 
+Below is a screenshot demonstrating the working of the project:
+
+
+![Grafana](path/to/image.png)
      
 
               
