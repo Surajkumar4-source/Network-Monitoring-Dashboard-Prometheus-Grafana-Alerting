@@ -217,11 +217,58 @@ This setup provides a full-stack network monitoring solution using Prometheus fo
 
 Below is a screenshot demonstrating the working of the project:
 
-
+ #### 1. -------------------------------------------------------------------------------Grafana Running on Terminal--------------------------------------------------------------------
+ 
 ![Grafana](/screenshorts/grafana_terminal.png)
+
+ #### 2. -------------------------------------------------------------------------------promethises Running on Terminal--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/promethises_terminal.png)
+
+
+ #### 3. -------------------------------------------------------------------------------Alertmanager Running on Terminal--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/alertmanager_terminal.png)
+
+
+
+ #### 4. -------------------------------------------------------------------------------Node_exporter Running on Terminal--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/node_exporter_terminal.png)
+
+
+
+
+ #### 5. -------------------------------------------------------------------------------Grafana Running on localhost--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/grafana___terminal.png)
+
+
+
+
+ #### 6. -------------------------------------------------------------------------------Node_exporter Running on localhost--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/node_exporter.png)
+
+
+ #### 7. -------------------------------------------------------------------------------promethises Running on localhost--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/rules.png)
+
+
+ #### 8. -------------------------------------------------------------------------------Alertmanager Running on localhost--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/alertmanager.png)
      
 
               
+ #### 9. -------------------------------------------------------------------------------Dummy_load running Terminal--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/dummy_load.png)
 
+
+ #### 10. -------------------------------------------------------------------------------Targets Running on localhost--------------------------------------------------------------------
+ 
+![Grafana](/screenshorts/targets.png)
 
 
