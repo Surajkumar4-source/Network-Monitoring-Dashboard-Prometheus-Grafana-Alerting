@@ -1,0 +1,183 @@
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:27:39.781958865+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.814304ms size=0 referer= handler=/api/live/ws status_source=server
+logger=infra.usagestats t=2024-10-08T23:27:56.144894988+05:30 level=info msg="Usage stats are ready to report"
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:28:15.656333035+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.997518ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:28:46.955803753+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.637947ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:28:49.38557399+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.432172ms size=0 referer= handler=/api/live/ws status_source=server
+logger=server t=2024-10-08T23:29:31.512760754+05:30 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=tracing t=2024-10-08T23:29:31.513350065+05:30 level=info msg="Closing tracing"
+logger=ticker t=2024-10-08T23:29:31.513811474+05:30 level=info msg=stopped last_tick=2024-10-09T04:41:00+05:30
+logger=grafana-apiserver t=2024-10-08T23:29:31.513860542+05:30 level=info msg="StorageObjectCountTracker pruner is exiting"
+logger=settings t=2024-10-08T23:29:33.07326237+05:30 level=info msg="Starting Grafana" version=11.2.1 commit=086b47f098a2f2d27a6d538cf4bc523c892ecdd2 branch=HEAD compiled=2024-10-08T23:29:33+05:30
+logger=settings t=2024-10-08T23:29:33.073574277+05:30 level=info msg="Config loaded from" file=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/conf/defaults.ini
+logger=settings t=2024-10-08T23:29:33.073602097+05:30 level=info msg=Target target=[all]
+logger=settings t=2024-10-08T23:29:33.073623666+05:30 level=info msg="Path Home" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1
+logger=settings t=2024-10-08T23:29:33.073637917+05:30 level=info msg="Path Data" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data
+logger=settings t=2024-10-08T23:29:33.073651081+05:30 level=info msg="Path Logs" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data/log
+logger=settings t=2024-10-08T23:29:33.073699546+05:30 level=info msg="Path Plugins" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data/plugins
+logger=settings t=2024-10-08T23:29:33.073714142+05:30 level=info msg="Path Provisioning" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/conf/provisioning
+logger=settings t=2024-10-08T23:29:33.073727219+05:30 level=info msg="App mode production"
+logger=featuremgmt t=2024-10-08T23:29:33.074041247+05:30 level=info msg=FeatureToggles prometheusMetricEncyclopedia=true panelMonitoring=true dataplaneFrontendFallback=true lokiQueryHints=true cloudWatchNewLabelParsing=true prometheusAzureOverrideAudience=true ssoSettingsApi=true logsExploreTableVisualisation=true groupToNestedTableTransformation=true logsInfiniteScrolling=true lokiQuerySplitting=true prometheusDataplane=true transformationsRedesign=true managedPluginsInstall=true lokiStructuredMetadata=true lokiMetricDataplane=true transformationsVariableSupport=true logsContextDatasourceUi=true autoMigrateXYChartPanel=true awsAsyncQueryCaching=true formatString=true addFieldFromCalculationStatFunctions=true alertingNoDataErrorExecution=true annotationPermissionUpdate=true alertingSimplifiedRouting=true prometheusConfigOverhaulAuth=true exploreMetrics=true nestedFolders=true topnav=true alertingInsights=true recoveryThreshold=true kubernetesPlaylists=true logRowsPopoverMenu=true recordedQueriesMulti=true cloudWatchCrossAccountQuerying=true publicDashboards=true influxdbBackendMigration=true dashgpt=true correlations=true tlsMemcached=true cloudWatchRoundUpEndTime=true angularDeprecationUI=true
+logger=sqlstore t=2024-10-08T23:29:33.074133222+05:30 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-10-08T23:29:33.081354007+05:30 level=info msg="Locking database"
+logger=migrator t=2024-10-08T23:29:33.081388891+05:30 level=info msg="Starting DB migrations"
+logger=migrator t=2024-10-08T23:29:33.104732134+05:30 level=info msg="migrations completed" performed=0 skipped=594 duration=1.26535ms
+logger=migrator t=2024-10-08T23:29:33.105337856+05:30 level=info msg="Unlocking database"
+logger=secrets t=2024-10-08T23:29:33.105838228+05:30 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=renderer.manager t=2024-10-08T23:29:33.165952353+05:30 level=error msg="Failed to get renderer plugin sources" error="failed to open plugins path"
+logger=plugin.angulardetectorsprovider.dynamic t=2024-10-08T23:29:33.166454502+05:30 level=info msg="Restored cache from database" duration=403.568µs
+logger=plugin.store t=2024-10-08T23:29:33.167663094+05:30 level=info msg="Loading plugins..."
+logger=plugin.sources t=2024-10-08T23:29:33.167697227+05:30 level=error msg="Failed to load external plugins" error="failed to open plugins path"
+logger=plugins.registration t=2024-10-08T23:29:33.193165396+05:30 level=error msg="Could not register plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugins.initialization t=2024-10-08T23:29:33.193219831+05:30 level=error msg="Could not initialize plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugin.store t=2024-10-08T23:29:33.19331847+05:30 level=info msg="Plugins loaded" count=54 duration=25.656575ms
+logger=query_data t=2024-10-08T23:29:33.196990593+05:30 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-10-08T23:29:33.199994139+05:30 level=info msg="Live Push Gateway initialization"
+logger=ngalert.notifier.alertmanager org=1 t=2024-10-08T23:29:33.202563815+05:30 level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+logger=ngalert.state.manager t=2024-10-08T23:29:33.293288803+05:30 level=info msg="Running in alternative execution of Error/NoData mode"
+logger=infra.usagestats.collector t=2024-10-08T23:29:33.295388759+05:30 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-10-08T23:29:33.296577626+05:30 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-10-08T23:29:33.296694488+05:30 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2024-10-08T23:29:33.296880754+05:30 level=info msg="Storage starting"
+logger=renderer.manager t=2024-10-08T23:29:33.296887799+05:30 level=error msg="Failed to get renderer plugin sources" error="failed to open plugins path"
+logger=ngalert.state.manager t=2024-10-08T23:29:33.298106939+05:30 level=info msg="Warming state cache for startup"
+logger=http.server t=2024-10-08T23:29:33.298882132+05:30 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.multiorg.alertmanager t=2024-10-08T23:29:33.301010293+05:30 level=info msg="Starting MultiOrg Alertmanager"
+logger=ngalert.state.manager t=2024-10-08T23:29:33.533240904+05:30 level=info msg="State cache has been initialized" states=0 duration=235.130792ms
+logger=ngalert.scheduler t=2024-10-08T23:29:33.533318102+05:30 level=info msg="Starting scheduler" tickInterval=10s maxAttempts=1
+logger=ticker t=2024-10-08T23:29:33.533377343+05:30 level=info msg=starting first_tick=2024-10-08T23:29:40+05:30
+logger=provisioning.dashboard t=2024-10-08T23:29:33.543558049+05:30 level=info msg="starting to provision dashboards"
+logger=provisioning.dashboard t=2024-10-08T23:29:33.543591842+05:30 level=info msg="finished to provision dashboards"
+logger=grafana-apiserver t=2024-10-08T23:29:33.816253211+05:30 level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2024-10-08T23:29:33.816844847+05:30 level=info msg="Adding GroupVersion featuretoggle.grafana.app v0alpha1 to ResourceManager"
+logger=plugins.update.checker t=2024-10-08T23:29:34.973081874+05:30 level=info msg="Update check succeeded" duration=1.676114997s
+logger=grafana.update.checker t=2024-10-08T23:29:34.973115543+05:30 level=info msg="Update check succeeded" duration=1.675085645s
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:29:35.023575277+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=4 duration=4.895471ms size=0 referer= handler=/api/live/ws status_source=server
+logger=live t=2024-10-08T23:29:35.025189532+05:30 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/rYdddlPWk address=grafana/dashboard/uid/rYdddlPWk
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:29:44.685895718+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.076523ms size=0 referer= handler=/api/live/ws status_source=server
+logger=infra.usagestats t=2024-10-08T23:30:29.327675032+05:30 level=info msg="Usage stats are ready to report"
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:30:41.384240909+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.173133ms size=0 referer= handler=/api/live/ws status_source=server
+logger=server t=2024-10-08T23:34:30.285537907+05:30 level=info msg="Shutdown started" reason="System signal: interrupt"
+logger=ticker t=2024-10-08T23:34:30.285751557+05:30 level=info msg=stopped last_tick=2024-10-08T23:34:30+05:30
+logger=grafana-apiserver t=2024-10-08T23:34:30.285977869+05:30 level=info msg="StorageObjectCountTracker pruner is exiting"
+logger=tracing t=2024-10-08T23:34:30.286015503+05:30 level=info msg="Closing tracing"
+logger=settings t=2024-10-08T23:34:31.226634298+05:30 level=info msg="Starting Grafana" version=11.2.1 commit=086b47f098a2f2d27a6d538cf4bc523c892ecdd2 branch=HEAD compiled=2024-10-08T23:34:31+05:30
+logger=settings t=2024-10-08T23:34:31.226918966+05:30 level=info msg="Config loaded from" file=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/conf/defaults.ini
+logger=settings t=2024-10-08T23:34:31.226938853+05:30 level=info msg=Target target=[all]
+logger=settings t=2024-10-08T23:34:31.22695169+05:30 level=info msg="Path Home" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1
+logger=settings t=2024-10-08T23:34:31.226987022+05:30 level=info msg="Path Data" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data
+logger=settings t=2024-10-08T23:34:31.226994937+05:30 level=info msg="Path Logs" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data/log
+logger=settings t=2024-10-08T23:34:31.227002053+05:30 level=info msg="Path Plugins" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data/plugins
+logger=settings t=2024-10-08T23:34:31.227010805+05:30 level=info msg="Path Provisioning" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/conf/provisioning
+logger=settings t=2024-10-08T23:34:31.227019666+05:30 level=info msg="App mode production"
+logger=featuremgmt t=2024-10-08T23:34:31.227288269+05:30 level=info msg=FeatureToggles angularDeprecationUI=true logsInfiniteScrolling=true lokiQueryHints=true logRowsPopoverMenu=true groupToNestedTableTransformation=true lokiQuerySplitting=true transformationsVariableSupport=true recordedQueriesMulti=true dashgpt=true prometheusMetricEncyclopedia=true cloudWatchNewLabelParsing=true cloudWatchCrossAccountQuerying=true lokiMetricDataplane=true exploreMetrics=true prometheusDataplane=true panelMonitoring=true influxdbBackendMigration=true annotationPermissionUpdate=true alertingSimplifiedRouting=true prometheusConfigOverhaulAuth=true logsContextDatasourceUi=true prometheusAzureOverrideAudience=true ssoSettingsApi=true lokiStructuredMetadata=true transformationsRedesign=true correlations=true nestedFolders=true publicDashboards=true recoveryThreshold=true cloudWatchRoundUpEndTime=true alertingNoDataErrorExecution=true logsExploreTableVisualisation=true addFieldFromCalculationStatFunctions=true dataplaneFrontendFallback=true autoMigrateXYChartPanel=true awsAsyncQueryCaching=true topnav=true formatString=true alertingInsights=true kubernetesPlaylists=true tlsMemcached=true managedPluginsInstall=true
+logger=sqlstore t=2024-10-08T23:34:31.227357835+05:30 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-10-08T23:34:31.231920443+05:30 level=info msg="Locking database"
+logger=migrator t=2024-10-08T23:34:31.231940278+05:30 level=info msg="Starting DB migrations"
+logger=migrator t=2024-10-08T23:34:31.241736216+05:30 level=info msg="migrations completed" performed=0 skipped=594 duration=323.857µs
+logger=migrator t=2024-10-08T23:34:31.242035664+05:30 level=info msg="Unlocking database"
+logger=secrets t=2024-10-08T23:34:31.242238384+05:30 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=renderer.manager t=2024-10-08T23:34:31.268872629+05:30 level=error msg="Failed to get renderer plugin sources" error="failed to open plugins path"
+logger=plugin.angulardetectorsprovider.dynamic t=2024-10-08T23:34:31.269216416+05:30 level=info msg="Restored cache from database" duration=281.872µs
+logger=plugin.store t=2024-10-08T23:34:31.270014949+05:30 level=info msg="Loading plugins..."
+logger=plugin.sources t=2024-10-08T23:34:31.270037535+05:30 level=error msg="Failed to load external plugins" error="failed to open plugins path"
+logger=plugins.registration t=2024-10-08T23:34:31.283710173+05:30 level=error msg="Could not register plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugins.initialization t=2024-10-08T23:34:31.283730415+05:30 level=error msg="Could not initialize plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugin.store t=2024-10-08T23:34:31.28378152+05:30 level=info msg="Plugins loaded" count=54 duration=13.767201ms
+logger=query_data t=2024-10-08T23:34:31.285842908+05:30 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-10-08T23:34:31.287392485+05:30 level=info msg="Live Push Gateway initialization"
+logger=ngalert.notifier.alertmanager org=1 t=2024-10-08T23:34:31.288946409+05:30 level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+logger=ngalert.state.manager t=2024-10-08T23:34:31.369762598+05:30 level=info msg="Running in alternative execution of Error/NoData mode"
+logger=infra.usagestats.collector t=2024-10-08T23:34:31.371235757+05:30 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-10-08T23:34:31.371982956+05:30 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-10-08T23:34:31.372002386+05:30 level=info msg="finished to provision alerting"
+logger=grafanaStorageLogger t=2024-10-08T23:34:31.372073052+05:30 level=info msg="Storage starting"
+logger=renderer.manager t=2024-10-08T23:34:31.372089754+05:30 level=error msg="Failed to get renderer plugin sources" error="failed to open plugins path"
+logger=ngalert.state.manager t=2024-10-08T23:34:31.372205529+05:30 level=info msg="Warming state cache for startup"
+logger=ngalert.multiorg.alertmanager t=2024-10-08T23:34:31.372376963+05:30 level=info msg="Starting MultiOrg Alertmanager"
+logger=http.server t=2024-10-08T23:34:31.375007334+05:30 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-10-08T23:34:31.38706369+05:30 level=info msg="State cache has been initialized" states=0 duration=14.856019ms
+logger=ngalert.scheduler t=2024-10-08T23:34:31.387128115+05:30 level=info msg="Starting scheduler" tickInterval=10s maxAttempts=1
+logger=ticker t=2024-10-08T23:34:31.387181584+05:30 level=info msg=starting first_tick=2024-10-08T23:34:40+05:30
+logger=grafana-apiserver t=2024-10-08T23:34:31.466399038+05:30 level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2024-10-08T23:34:31.466720921+05:30 level=info msg="Adding GroupVersion featuretoggle.grafana.app v0alpha1 to ResourceManager"
+logger=provisioning.dashboard t=2024-10-08T23:34:31.566684321+05:30 level=info msg="starting to provision dashboards"
+logger=provisioning.dashboard t=2024-10-08T23:34:31.566750654+05:30 level=info msg="finished to provision dashboards"
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:34:31.719526144+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=14 duration=14.355669ms size=0 referer= handler=/api/live/ws status_source=server
+logger=live t=2024-10-08T23:34:31.724991764+05:30 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/rYdddlPWk address=grafana/dashboard/uid/rYdddlPWk
+logger=plugins.update.checker t=2024-10-08T23:34:31.857719605+05:30 level=info msg="Update check succeeded" duration=485.635363ms
+logger=grafana.update.checker t=2024-10-08T23:34:31.961979096+05:30 level=info msg="Update check succeeded" duration=589.882064ms
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:35:00.454177933+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.251189ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:35:07.677534465+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.999557ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:36:02.663008771+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.97705ms size=0 referer= handler=/api/live/ws status_source=server
+logger=infra.usagestats t=2024-10-08T23:36:17.377579701+05:30 level=info msg="Usage stats are ready to report"
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:36:19.294698124+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.166765ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-08T23:39:52.742348199+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.941036ms size=0 referer= handler=/api/live/ws status_source=server
+logger=settings t=2024-10-11T02:34:49.734975524+05:30 level=info msg="Starting Grafana" version=11.2.1 commit=086b47f098a2f2d27a6d538cf4bc523c892ecdd2 branch=HEAD compiled=2024-10-11T02:34:49+05:30
+logger=settings t=2024-10-11T02:34:49.736037124+05:30 level=info msg="Config loaded from" file=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/conf/defaults.ini
+logger=settings t=2024-10-11T02:34:49.736127284+05:30 level=info msg=Target target=[all]
+logger=settings t=2024-10-11T02:34:49.736190579+05:30 level=info msg="Path Home" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1
+logger=settings t=2024-10-11T02:34:49.736238174+05:30 level=info msg="Path Data" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data
+logger=settings t=2024-10-11T02:34:49.736297578+05:30 level=info msg="Path Logs" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data/log
+logger=settings t=2024-10-11T02:34:49.736347161+05:30 level=info msg="Path Plugins" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/data/plugins
+logger=settings t=2024-10-11T02:34:49.73639355+05:30 level=info msg="Path Provisioning" path=/home/dhpcsa/Desktop/monitoring/grafana-v11.2.1/conf/provisioning
+logger=settings t=2024-10-11T02:34:49.736437539+05:30 level=info msg="App mode production"
+logger=featuremgmt t=2024-10-11T02:34:49.751787669+05:30 level=info msg=FeatureToggles dashgpt=true nestedFolders=true groupToNestedTableTransformation=true tlsMemcached=true prometheusMetricEncyclopedia=true panelMonitoring=true logsInfiniteScrolling=true managedPluginsInstall=true topnav=true ssoSettingsApi=true formatString=true prometheusDataplane=true lokiQuerySplitting=true logRowsPopoverMenu=true cloudWatchRoundUpEndTime=true awsAsyncQueryCaching=true influxdbBackendMigration=true logsExploreTableVisualisation=true transformationsRedesign=true alertingNoDataErrorExecution=true autoMigrateXYChartPanel=true cloudWatchNewLabelParsing=true transformationsVariableSupport=true annotationPermissionUpdate=true publicDashboards=true alertingInsights=true alertingSimplifiedRouting=true lokiQueryHints=true logsContextDatasourceUi=true recoveryThreshold=true lokiStructuredMetadata=true recordedQueriesMulti=true prometheusAzureOverrideAudience=true prometheusConfigOverhaulAuth=true cloudWatchCrossAccountQuerying=true lokiMetricDataplane=true kubernetesPlaylists=true addFieldFromCalculationStatFunctions=true exploreMetrics=true dataplaneFrontendFallback=true angularDeprecationUI=true correlations=true
+logger=sqlstore t=2024-10-11T02:34:49.75224228+05:30 level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2024-10-11T02:34:49.901902038+05:30 level=info msg="Locking database"
+logger=migrator t=2024-10-11T02:34:49.9019555+05:30 level=info msg="Starting DB migrations"
+logger=migrator t=2024-10-11T02:34:49.967084017+05:30 level=info msg="migrations completed" performed=0 skipped=594 duration=592.923µs
+logger=migrator t=2024-10-11T02:34:49.967588093+05:30 level=info msg="Unlocking database"
+logger=secrets t=2024-10-11T02:34:49.967939443+05:30 level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=renderer.manager t=2024-10-11T02:34:50.074830154+05:30 level=error msg="Failed to get renderer plugin sources" error="failed to open plugins path"
+logger=plugin.angulardetectorsprovider.dynamic t=2024-10-11T02:34:50.07620488+05:30 level=info msg="Restored cache from database" duration=1.273841ms
+logger=plugin.store t=2024-10-11T02:34:50.160159232+05:30 level=info msg="Loading plugins..."
+logger=plugin.sources t=2024-10-11T02:34:50.160311453+05:30 level=error msg="Failed to load external plugins" error="failed to open plugins path"
+logger=plugins.registration t=2024-10-11T02:34:50.365459358+05:30 level=error msg="Could not register plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugins.initialization t=2024-10-11T02:34:50.365540791+05:30 level=error msg="Could not initialize plugin" pluginId=xychart error="plugin xychart is already registered"
+logger=plugin.store t=2024-10-11T02:34:50.365687749+05:30 level=info msg="Plugins loaded" count=54 duration=205.532663ms
+logger=query_data t=2024-10-11T02:34:50.447610214+05:30 level=info msg="Query Service initialization"
+logger=live.push_http t=2024-10-11T02:34:50.481871281+05:30 level=info msg="Live Push Gateway initialization"
+logger=ngalert.notifier.alertmanager org=1 t=2024-10-11T02:34:50.518293913+05:30 level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+logger=ngalert.state.manager t=2024-10-11T02:34:50.683480536+05:30 level=info msg="Running in alternative execution of Error/NoData mode"
+logger=infra.usagestats.collector t=2024-10-11T02:34:50.725271734+05:30 level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=provisioning.alerting t=2024-10-11T02:34:50.727056427+05:30 level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2024-10-11T02:34:50.727082544+05:30 level=info msg="finished to provision alerting"
+logger=ngalert.state.manager t=2024-10-11T02:34:50.727231545+05:30 level=info msg="Warming state cache for startup"
+logger=grafanaStorageLogger t=2024-10-11T02:34:50.727285041+05:30 level=info msg="Storage starting"
+logger=ngalert.multiorg.alertmanager t=2024-10-11T02:34:50.727778404+05:30 level=info msg="Starting MultiOrg Alertmanager"
+logger=renderer.manager t=2024-10-11T02:34:50.72775025+05:30 level=error msg="Failed to get renderer plugin sources" error="failed to open plugins path"
+logger=provisioning.dashboard t=2024-10-11T02:34:50.735584894+05:30 level=info msg="starting to provision dashboards"
+logger=provisioning.dashboard t=2024-10-11T02:34:50.735608919+05:30 level=info msg="finished to provision dashboards"
+logger=http.server t=2024-10-11T02:34:50.762092488+05:30 level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2024-10-11T02:34:50.797060999+05:30 level=info msg="State cache has been initialized" states=0 duration=69.822422ms
+logger=ngalert.scheduler t=2024-10-11T02:34:50.797246039+05:30 level=info msg="Starting scheduler" tickInterval=10s maxAttempts=1
+logger=ticker t=2024-10-11T02:34:50.797516661+05:30 level=info msg=starting first_tick=2024-10-11T02:35:00+05:30
+logger=grafana-apiserver t=2024-10-11T02:34:51.252543762+05:30 level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2024-10-11T02:34:51.253136271+05:30 level=info msg="Adding GroupVersion featuretoggle.grafana.app v0alpha1 to ResourceManager"
+logger=plugin.angulardetectorsprovider.dynamic t=2024-10-11T02:35:00.728660829+05:30 level=error msg="Error while updating detectors" error="fetch: http do: Get \"https://grafana.com/api/plugins/angular_patterns\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"
+logger=plugin.angulardetectorsprovider.dynamic t=2024-10-11T02:35:00.729281434+05:30 level=info msg="Patterns update finished" duration=10.001330067s
+logger=grafana.update.checker t=2024-10-11T02:35:00.72878272+05:30 level=error msg="Update check failed" error="failed to get stable version from grafana.com: Get \"https://grafana.com/api/grafana/versions/stable\": dial tcp: lookup grafana.com: i/o timeout" duration=10.001274307s
+logger=context userId=0 orgId=0 uname= t=2024-10-11T02:35:27.478865729+05:30 level=info msg="Request Completed" method=GET path=/ status=302 remote_addr=127.0.0.1 time_ms=0 duration=453.14µs size=47 referer= handler=/ status_source=server
+logger=context userId=0 orgId=0 uname= t=2024-10-11T02:35:27.595791362+05:30 level=info msg="Request Completed" method=GET path=/user/auth-tokens/rotate status=302 remote_addr=127.0.0.1 time_ms=115 duration=115.359261ms size=24 referer= handler=/user/auth-tokens/rotate status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:35:29.306445314+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.06645ms size=0 referer= handler=/api/live/ws status_source=server
+logger=infra.usagestats t=2024-10-11T02:35:41.753991234+05:30 level=info msg="Usage stats are ready to report"
+logger=live t=2024-10-11T02:36:14.616757033+05:30 level=info msg="Initialized channel handler" channel=grafana/dashboard/uid/rYdddlPWk address=grafana/dashboard/uid/rYdddlPWk
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:36:18.31115564+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.23898ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:37:13.451519078+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.066253ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:37:16.532491836+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.025367ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:21.649144834+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.440271ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:23.37678673+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.394444ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:24.991077877+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.476231ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:26.877240408+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.781945ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:28.620174182+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.208178ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:30.254194024+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.068629ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:46.38797161+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.377762ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:38:49.00768521+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.697933ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:39:00.165283127+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.687929ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:39:02.392979747+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.063834ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:39:04.946504288+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=2 duration=2.519507ms size=0 referer= handler=/api/live/ws status_source=server
+logger=context userId=1 orgId=1 uname=admin t=2024-10-11T02:39:20.433522497+05:30 level=info msg="Request Completed" method=GET path=/api/live/ws status=-1 remote_addr=127.0.0.1 time_ms=1 duration=1.805156ms size=0 referer= handler=/api/live/ws status_source=server
+logger=cleanup t=2024-10-11T02:44:51.034307205+05:30 level=info msg="Completed cleanup jobs" duration=305.677236ms
+logger=plugins.update.checker t=2024-10-11T02:45:01.297123457+05:30 level=info msg="Update check succeeded" duration=567.383888ms
+logger=cleanup t=2024-10-11T02:54:50.838249843+05:30 level=info msg="Completed cleanup jobs" duration=110.098603ms
+logger=plugins.update.checker t=2024-10-11T02:55:01.748644569+05:30 level=info msg="Update check succeeded" duration=1.018088578s
