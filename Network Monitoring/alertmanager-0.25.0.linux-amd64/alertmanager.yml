@@ -1,0 +1,19 @@
+global:
+  resolve_timeout: 1m
+ 
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 20s
+  receiver: email_alert
+receivers:
+- name: email_alert
+  email_configs:
+  - to: csuraj982@gmail.com
+    from: avijeet148262salve@gmail.com
+    smarthost: smtp.gmail.com:587
+    auth_username: avijeet148262salve@gmail.com
+    auth_identity: avijeet148262salve@gmail.com
+    auth_password: ffyivpzoznfdpdnk
