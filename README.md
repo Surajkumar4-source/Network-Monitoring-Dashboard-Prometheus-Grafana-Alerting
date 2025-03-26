@@ -60,185 +60,296 @@ Before you begin the installation, ensure that the following prerequisites are i
 
 
 
-
-
-# Project Setup
-
-### 1. Prometheus Setup
-
-#### Step 1: Install Prometheus
-
-Download and install Prometheus on your centralized monitoring server:
-
-```yml
-           wget https://github.com/prometheus/prometheus/releases/download/v2.32.0/prometheus-2.32.0.linux-amd64.tar.gz
-            tar xvf prometheus-2.32.0.linux-amd64.tar.gz
-            cd prometheus-2.32.0.linux-amd64
- ```
-
-
-Step 2: Configure Prometheus
-Edit the prometheus.yml file to scrape metrics from client nodes:
-
-
-```yml
-         scrape_configs:
-          - job_name: 'node_exporter'
-            scrape_interval: 15s
-            static_configs:
-              - targets: ['<client_node_1>:9100', '<client_node_2>:9100'].
-```
-
-##### Replace <client_node_1> and <client_node_2> with the actual IPs of your client nodes.
-
-Step 3: Start Prometheus
-
-```yml
-          ./prometheus --config.file=prometheus.yml
-```
-
-### 2. Node Exporter Setup (Client Nodes)
-#####  Install Node Exporter on each client node to expose system metrics:
-
-```yml
-
-        wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
-        tar xvf node_exporter-1.3.1.linux-amd64.tar.gz
-        cd node_exporter-1.3.1.linux-amd64
-        ./node_exporter
-
-```
-
-### 3. Grafana Setup (Visualization)
-
-##### Step 1: Install Grafana
-##### Download and install Grafana:
-
-```yml
-
-     sudo apt-get install -y grafana
-     sudo systemctl start grafana-server
-
-```
-
-##### Step 2: Configure Grafana
-
-```yml
-Access Grafana: http://<server_IP>:3000
-
-Default login:
-
-Username: admin
-
-Password: admin
-
-Add Prometheus as a data source:
-
-Go to Settings → Data Sources
-
-Select Prometheus and use http://localhost:9090 as the URL.
-
-Create dashboards to visualize metrics like CPU, memory, and disk usage.
-
-```
-
-### 4. AlertManager Setup (Alerts)
-Step 1: Install AlertManager
-Download and install AlertManager:
-
-```yml
-
-    wget https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.linux-amd64.tar.gz
-    tar xvf alertmanager-0.23.0.linux-amd64.tar.gz
-    cd alertmanager-0.23.0.linux-amd64
-
-```
-
-Step 2: Configure AlertManager
-Edit the alertmanager.yml configuration file to set up alert receivers (email, Slack, etc.).
-
-Step 3: Integrate with Prometheus
-
-Modify prometheus.yml to include AlertManager:
-
-```yml
-
-    alerting:
-      alertmanagers:
-        - static_configs:
-          - targets: ['localhost:9093']
-
-```
-
-
-Step 4: Define Alert Rules
-Create alert rules in alert.rules.yml:
-
-```yml
-
-    groups:
-      - name: alert.rules
-        rules:
-          - alert: HighCPUUsage
-            expr: node_cpu_seconds_total{mode="idle"} < 10
-            for: 1m
-            labels:
-              severity: critical
-            annotations:
-              summary: "High CPU Usage"
-              description: "CPU usage is above threshold."
-
-Load the rules into Prometheus:
-
-      ./prometheus --config.file=prometheus.yml --web.enable-lifecycle
-
-```
-
-
-5.Generate dummy load using stress-ng package:
-
-      stress-ng --cpu 4 --timeout 60s --metrics-brief
-
-
-
-### How to Run
-
-1.Start Prometheus:
-
-    ./prometheus --config.file=prometheus.yml
-
-2.Start Node Exporter on each client node: 
-   
-      ./node_exporter
-      
-3.Start Grafana:
-
-     sudo systemctl start grafana-server
-
-4.Start AlertManager:   
-
-    ./alertmanager --config.file=alertmanager.yml
-
-### Access
-Prometheus: http://<server_IP>:9090
-
-Grafana: http://<server_IP>:3000
-
-AlertManager: http://<server_IP>:9093
-
-
-## Conclusion
-
-This setup provides a full-stack network monitoring solution using Prometheus for metrics collection, Grafana for visualization, and AlertManager for alerting.
-      
- 
-
-
-            
-            
-            
+<br>            
           
+<br>
 
+# Project Setup Implementation 
+
+
+# Prometheus, Grafana, and Node Exporter Setup
+
+## Step 1: Update and Install Dependencies
+```bash
+sudo apt update -y
+sudo apt install -y wget unzip
+```
+
+## Step 2: Install Prometheus
+```bash
+wget https://github.com/prometheus/prometheus/releases/download/v2.42.0/prometheus-2.42.0.linux-amd64.tar.gz
+tar xvf prometheus-2.42.0.linux-amd64.tar.gz
+cd prometheus-2.42.0.linux-amd64
+
+sudo mv prometheus /usr/local/bin/
+sudo mv promtool /usr/local/bin/
+```
+
+### Configure Prometheus
+```bash
+sudo mkdir -p /etc/prometheus
+sudo touch /etc/prometheus/prometheus.yml
+sudo nano /etc/prometheus/prometheus.yml
+```
+**Add the following content:**
+```yaml
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets: ['localhost:9100']
+```
+
+### Create Prometheus Systemd Service
+```bash
+sudo nano /etc/systemd/system/prometheus.service
+```
+**Add the following content:**
+```ini
+[Unit]
+Description=Prometheus
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+Group=root
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/var/lib/prometheus/data \
+  --web.listen-address=0.0.0.0:9090
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Start Prometheus Service
+```bash
+sudo mkdir -p /var/lib/prometheus/data
+sudo chown -R root:root /var/lib/prometheus
+
+sudo systemctl daemon-reload
+sudo systemctl enable prometheus
+sudo systemctl start prometheus
+```
+
+## Step 3: Install Node Exporter   (on al  clients)
+```bash
+wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
+tar xvf node_exporter-1.5.0.linux-amd64.tar.gz
+sudo mv node_exporter-1.5.0.linux-amd64/node_exporter /usr/local/bin/
+```
+
+### Create Node Exporter Systemd Service
+```bash
+sudo nano /etc/systemd/system/node_exporter.service
+```
+**Add the following content:**
+```ini
+[Unit]
+Description=Node Exporter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Start Node Exporter Service
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable node_exporter
+sudo systemctl start node_exporter
+```
+
+## Step 4: Install Grafana
+```bash
+sudo apt-get install -y adduser libfontconfig1 musl
+wget https://dl.grafana.com/oss/release/grafana_11.2.1_amd64.deb
+sudo dpkg -i grafana_11.2.1_amd64.deb
+```
+
+### Start Grafana Service
+```bash
+sudo systemctl enable grafana-server
+sudo systemctl start grafana-server
+```
+**Dashboard Import ID:** `1860`
+
+## Step 5: Install Alertmanager
+```bash
+wget https://github.com/prometheus/alertmanager/releases/download/v0.25.0/alertmanager-0.25.0.linux-amd64.tar.gz
+tar -xvzf alertmanager-0.25.0.linux-amd64.tar.gz
+mv alertmanager-0.25.0.linux-amd64 alertmanager
+
+sudo mv alertmanager/alertmanager /usr/local/bin/
+sudo mv alertmanager/amtool /usr/local/bin/
+```
+
+### Configure Alertmanager
+```bash
+sudo mkdir -p /etc/alertmanager
+sudo nano /etc/alertmanager/alertmanager.yml
+```
+**Add the following content:**
+```yaml
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ['alertname']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 1h
+  receiver: email_alert
+
+receivers:
+- name: email_alert
+  email_configs:
+  - to: csemanit2015@gmail.com
+    from: aryan.arunachalam@gmail.com
+    smarthost: smtp.gmail.com:587
+    auth_username: aryan.arunachalam@gmail.com
+    auth_identity: aryan.arunachalam@gmail.com
+    auth_password: qzqyqmbeymmjtbbk
+```
+
+### Create Alertmanager Systemd Service
+```bash
+sudo nano /etc/systemd/system/alertmanager.service
+```
+**Add the following content:**
+```ini
+[Unit]
+Description=Alertmanager
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+User=arun
+ExecStart=/usr/local/bin/alertmanager --config.file=/etc/alertmanager/alertmanager.yml --storage.path=/var/lib/alertmanager/data
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+### Start Alertmanager Service
+```bash
+sudo mkdir -p /var/lib/alertmanager/data
+sudo chown arun:arun /var/lib/alertmanager/data
+
+sudo systemctl daemon-reload
+sudo systemctl enable alertmanager
+sudo systemctl start alertmanager
+```
+
+## Step 6: Configure Prometheus for Alerting
+```bash
+sudo nano /etc/prometheus/prometheus.yml
+```
+**Add the following alerting configuration:**
+```yaml
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+            - 'localhost:9093'
+
+rule_files:
+  - "/etc/prometheus/alert.rules.yml"
+```
+
+### Create Alerting Rules
+```bash
+sudo touch /etc/prometheus/alert.rules.yml
+sudo nano /etc/prometheus/alert.rules.yml
+```
+**Add the following content:**
+```yaml
+groups:
+  - name: alert.rules
+    rules:
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[1m])) * 100) > 80
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High CPU Usage"
+          description: "CPU usage is above 80%."
+
+      - alert: HighMemoryUsage
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100 > 80
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Memory Usage"
+          description: "Memory usage is above 80%."
+
+      - alert: NodeDown
+        expr: up == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Node Down"
+          description: "The node is not responding for more than 2 minutes."
+```
+
+### Restart Prometheus
+```bash
+sudo systemctl restart prometheus
+```
+
+
+### Step 7: Configure Grafana Dashboard
+
+```yml
+
+Open Grafana (http://localhost:3000)
+
+Login with default credentials (admin/admin)
+
+Add a Prometheus data source:
+
+Navigate to Configuration > Data Sources
+
+Select Prometheus
+
+Set the URL to http://localhost:9090
+
+Click Save & Test
+
+Import a Grafana dashboard:
+
+Go to Dashboards > Import
+
+Enter Dashboard ID (e.g., 1860 for a Node Exporter dashboard)
+
+Select Prometheus as the data source
+
+```
+
+
+
+
+## Setup Complete! 🎉
+
+
+
+            
+            
+<br>            
+          
+<br>
 
 
 ### Screenshots
