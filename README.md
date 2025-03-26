@@ -70,46 +70,60 @@ Before you begin the installation, ensure that the following prerequisites are i
 
 Download and install Prometheus on your centralized monitoring server:
 
-     ```bash
+```yml
            wget https://github.com/prometheus/prometheus/releases/download/v2.32.0/prometheus-2.32.0.linux-amd64.tar.gz
             tar xvf prometheus-2.32.0.linux-amd64.tar.gz
             cd prometheus-2.32.0.linux-amd64
+ ```
 
 
 Step 2: Configure Prometheus
 Edit the prometheus.yml file to scrape metrics from client nodes:
 
 
-     ```bash
+```yml
          scrape_configs:
           - job_name: 'node_exporter'
             scrape_interval: 15s
             static_configs:
-              - targets: ['<client_node_1>:9100', '<client_node_2>:9100'].  
+              - targets: ['<client_node_1>:9100', '<client_node_2>:9100'].
+```
 
 ##### Replace <client_node_1> and <client_node_2> with the actual IPs of your client nodes.
 
 Step 3: Start Prometheus
 
-     ```bash
+```yml
           ./prometheus --config.file=prometheus.yml
+```
 
 ### 2. Node Exporter Setup (Client Nodes)
 #####  Install Node Exporter on each client node to expose system metrics:
+
+```yml
 
         wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
         tar xvf node_exporter-1.3.1.linux-amd64.tar.gz
         cd node_exporter-1.3.1.linux-amd64
         ./node_exporter
+
+```
+
 ### 3. Grafana Setup (Visualization)
 
 ##### Step 1: Install Grafana
 ##### Download and install Grafana:
 
+```yml
+
      sudo apt-get install -y grafana
      sudo systemctl start grafana-server
+
+```
+
 ##### Step 2: Configure Grafana
 
+```yml
 Access Grafana: http://<server_IP>:3000
 
 Default login:
@@ -126,13 +140,19 @@ Select Prometheus and use http://localhost:9090 as the URL.
 
 Create dashboards to visualize metrics like CPU, memory, and disk usage.
 
+```
+
 ### 4. AlertManager Setup (Alerts)
 Step 1: Install AlertManager
 Download and install AlertManager:
 
+```yml
+
     wget https://github.com/prometheus/alertmanager/releases/download/v0.23.0/alertmanager-0.23.0.linux-amd64.tar.gz
     tar xvf alertmanager-0.23.0.linux-amd64.tar.gz
     cd alertmanager-0.23.0.linux-amd64
+
+```
 
 Step 2: Configure AlertManager
 Edit the alertmanager.yml configuration file to set up alert receivers (email, Slack, etc.).
@@ -141,14 +161,20 @@ Step 3: Integrate with Prometheus
 
 Modify prometheus.yml to include AlertManager:
 
+```yml
+
     alerting:
       alertmanagers:
         - static_configs:
           - targets: ['localhost:9093']
 
+```
+
 
 Step 4: Define Alert Rules
 Create alert rules in alert.rules.yml:
+
+```yml
 
     groups:
       - name: alert.rules
@@ -165,6 +191,8 @@ Create alert rules in alert.rules.yml:
 Load the rules into Prometheus:
 
       ./prometheus --config.file=prometheus.yml --web.enable-lifecycle
+
+```
 
 
 5.Generate dummy load using stress-ng package:
