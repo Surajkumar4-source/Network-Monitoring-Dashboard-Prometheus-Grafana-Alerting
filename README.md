@@ -449,9 +449,9 @@ With this setup, you can ensure that your infrastructure is continuously monitor
 Below is an screnshort , we get when alert occurs by alertmanager:
 
 
-![Grafana](/screenshorts/mail.jpg)
 
 
+![mail  blur](https://github.com/user-attachments/assets/35ddacc1-9b62-4b0a-a7d8-3b9ec6d8fdfc)
 
 
 
